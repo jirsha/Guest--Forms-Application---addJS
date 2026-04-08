@@ -1,0 +1,34 @@
+<!-- page that displays results once you've successfully entered them -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="success">Profile Saved Successfully!</h2>
+
+<div>
+    <h3>Your Profile Information:</h3>
+    
+    {% if profile_picture_filename or profile_picture_base64 %}
+    <div style="margin: 20px 0;">
+        <p><strong>Profile Picture:</strong></p>
+        {% if profile_picture_filename %}
+            <img src="{{ url_for('static', filename='uploads/' + profile_picture_filename) }}" 
+                 alt="Profile Picture" 
+                 class="profile-picture">
+        {% elif profile_picture_base64 %}
+            <img src="data:image/jpeg;base64,{{ profile_picture_base64 }}" 
+                 alt="Profile Picture" 
+                 class="profile-picture">
+        {% endif %}
+    </div>
+    {% endif %}
+    
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Total Guests:</strong> {{ quan }}</p>
+    <p><strong>Comments or Issues:</strong> {{ comments if comments else "Not provided" }}</p>
+    <p><strong>Relationship to me:</strong> {{ rel }}</p>
+    <p><strong>Accommodations Required:</strong> {{ "Yes" if accommodations else "No" }}</p>
+</div>
+
+<a href="{{ url_for('profile') }}">Create Another Profile</a>
+{% endblock %}

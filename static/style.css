@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+/* Profile picture styling */
+.profile-picture {
+    width: 1in;
+    height: 1in;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* File upload styling */
+.file-upload-container {
+    margin: 10px 0;
+}
+
+.file-upload-container label {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+}
+
+.file-upload-container input[type="file"] {
+    margin-top: 5px;
+}
+
+.file-upload-container small {
+    display: block;
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 5px;
+    margin-left: 120px;
+}
+
+/* Error and info messages */
+.error-message {
+    background-color: #ffebee;
+    border-left: 4px solid #f44336;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.error-message .error {
+    color: #d32f2f;
+    margin: 0;
+    font-weight: 500;
+}
+
+.file-error {
+    background-color: #ffebee;
+    border-left: 4px solid #f44336;
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: 120px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #d32f2f;
+}
+
+.file-info {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: 120px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #2e7d32;
+}
